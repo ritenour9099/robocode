@@ -14,3 +14,4 @@ GUIDELINES
 specific piece of code.
 4. Make sure to have a friendly attitude and be nice,- 
 and make sure you give constructive critisism when using the issue tab.
+5. document any changes in the wiki

@@ -1,0 +1,35 @@
+*This is the pseudocode for the color differentiation function and the function for pressing the corresponding button.*
+
+
+Pseudocode for ColorFunction(String color){
+  At this point, the robot will already be at the light module.
+  
+  The robot should begin by getting the color value infront of it. (You will take one arguement, a string, and if the string-
+  -says "blue" then you will test whether or not the color is blue, and vice versa for "red")
+  
+  If the color value is equal to the given color, then the robot will execute the PushRightButton() function, but if-
+  -it isn't equal to the given color, then the robot will execute the PushLeftButton() function.
+  
+}
+
+Pseudocode for PushRightButton(){
+  Now that we know we need to push the right button, the robot will have to move it's treads and scoop to hit the right button.
+  
+  The robot should put it's tread motors in reverse for x seconds (We'll figure out how long it needs to go in testing.)
+  After going in reverse, the robot should activate it's motors to turn itself right (You can look at the example-
+  -code to see how to do that!)
+  Then, the robot will move forward for x seconds, and then turn left so the scoop hits the button.
+  At that point, the robot will reverse it's movements so that it ends at the position it starts.
+  
+}
+
+Pseudocode for PushLeftButton(){
+  Now that we know we need to push the left button, the robot will have to move it's treads and scoop to hit the left button.
+  
+  The robot should put it's tread motors in reverse for x seconds (We'll figure out how long it needs to go in testing.)
+  After going in reverse, the robot should activate it's motors to turn itself left (You can look at the example-
+  -code to see how to do that!)
+  Then, the robot will move forward for x seconds, and then turn right for x seconds so the scoop hits the button.
+  At that point, the robot will reverse it's movements so that it ends at the position it starts.
+  
+}

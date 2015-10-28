@@ -30,12 +30,11 @@ public void init() {
     @Override
 public void start() {
 
-        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        sleep(1000);
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
-        motorScoopRight.setPower(TREAD_MOTOR_PWR);
-        motorScoopLeft.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
         motorFrontLeft.setPower(0.0);
@@ -44,46 +43,36 @@ public void start() {
         motorBackRight.setPower(0.0);
 
         sleep(1000);
-        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-
-        sleep(1000);
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
-        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
 
         sleep(1000);
-        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-
-        sleep(1000)
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1000)
-        motorScoopLeft.setPower(TREAD_MOTOR_PWR);
-        motorScoopRight.setPower(TREAD_MOTOR_PWR);
+        sleep(1000);
+        motorScoopLeft.setPower(0.0);
+        motorScoopRight.setPower(0.0);
 
-        sleep(1000)
+        sleep(1000);
         motorBackLeft.setPower(-500);
         motorBackRight.setPower(-500);
 
-        sleep(1000)
+        sleep(1000);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-
+        sleep(1000);
+        motorScoopLeft.setPower(0.0);
+        motorScoopRight.setPower(0.0);
 
     }
 

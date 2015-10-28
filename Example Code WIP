@@ -1,0 +1,26 @@
+/*Hey there! This file is just an example program (Wont actually run, sorry about that!)
+*This will run you through the process of assigning Dc motors, creating the start and init functions, 
+*making the motors move, and making the motors change/stop after a set amount of time
+*if there are any concerns with the document, please notify me next club meeting.
+*/
+
+//When creating our classes, make sure to extend OpMode!
+public class ExampleCode extends OpMode{
+
+  //to create a motor variable, you have to do this before creating any functions (For ever motor varaible you create)
+  DcMotor motorNameHere;
+  
+  //Whenever creating an init or start function, you have to follow this format-
+  //(The @Override isn't needed if you're making your own functions that aren't init or start!)
+    @Override
+    public void init() {
+      //This is the second half of creating the motor variable, as this binds the variable to teh motor on- 
+      //the actual robot itself.
+      motorNameHere = hardwareMap.dcMotor.get("motor_1");
+    }
+    
+    @Override
+    public void start() {
+    //Now that you have your motor variable ready to be used, you probably wanna use it, right? 
+    //This is the syntax to set the motor's power
+    motorNameHere.setPower(0.5);

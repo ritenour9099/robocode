@@ -14,9 +14,11 @@ public class ExampleCode extends OpMode{
   //(The @Override isn't needed if you're making your own functions that aren't init or start!)
     @Override
     public void init() {
-      //This is the second half of creating the motor variable, as this binds the variable to teh motor on- 
+      //This is the second half of creating the motor variable, as this binds the variable to the motor on- 
       //the actual robot itself.
       motorNameHere = hardwareMap.dcMotor.get("motor_1");
+      
+      //Also, this is where you would initialize any sensors, but that example will be added at a later date.
     }
     
     @Override
@@ -24,3 +26,12 @@ public class ExampleCode extends OpMode{
     //Now that you have your motor variable ready to be used, you probably wanna use it, right? 
     //This is the syntax to set the motor's power
     motorNameHere.setPower(0.5);
+    //But oh no! How will we ever stop the motor now! It's just running on and on forever!
+    sleep(1000); 
+    motorNameHere.setpower(0.0);
+    
+    //Here, we specified the time we wanted the motor to run before the next action using the 'sleep();'
+    //-function, then stopped the motor by setting it's power to 0.
+    
+    //P.S. an important thing to note with setting power to the motors, they work on a vector. 
+    //This basically means that the values it can take has to be from -1.0 to 1.0, otherwise it'll throw an error.

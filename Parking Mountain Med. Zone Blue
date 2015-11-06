@@ -1,0 +1,53 @@
+//Time To Execute: 5 Seconds
+
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+import java.lang.Override;
+
+public class ParkingMoutainHighZone_Red extends OpMode{
+
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    DcMotor motorScoopLeft;
+    DcMotor motorScoopRight;
+    final static double TREAD_MOTOR_PWR = 0.75;
+
+    @Override
+    public void init() {
+        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
+        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
+        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
+        motorBackRight = hardwareMap.dcMotor.get("motor_4");
+        motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
+        motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+
+    }
+    @Override
+    public void start(){
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackRight.setPower(-TREAD_MOTOR_PWR);
+        sleep(2000);
+
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackRight.setPower(TREAD_MOTOR_PWR);
+
+        sleep(3000);
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+    }
+}

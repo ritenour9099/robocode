@@ -1,4 +1,7 @@
-m.qualcomm.ftcrobotcontroller.opmodes;
+//Time To Execute: 9 Seconds
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
  * Created by HuynhT311 on 11/5/2015.
@@ -32,7 +35,6 @@ abstract public class InitialPersonRescue_NoScoopFloor extends OpMode{
     @Override
     public void start() {
 
-        sleep(1000);
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);

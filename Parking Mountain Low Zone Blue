@@ -1,4 +1,5 @@
 //Time To Execute: 4 Seconds
+package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;

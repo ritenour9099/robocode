@@ -67,10 +67,10 @@ abstract public class InitialPersonRescue_NoScoopFloor extends OpMode{
         motorScoopRight.setPower(0.0);
 
         sleep(1000);
-        motorFrontLeft.setPower(-1.0);
-        motorFrontRight.setPower(-1.0);
-        motorBackLeft.setPower(-1.0);
-        motorBackRight.setPower(-1.0);
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+        motorBackRight.setPower(-TREAD_MOTOR_PWR);
 
         sleep(1000);
         motorFrontLeft.setPower(0.0);
@@ -79,37 +79,12 @@ abstract public class InitialPersonRescue_NoScoopFloor extends OpMode{
         motorBackRight.setPower(0.0);
 
         sleep(1000);
-        motorScoopLeft.setPower(08.0);
-        motorScoopRight.setPower(08.0);
+        motorScoopLeft.setPower(TREAD_MOTOR_PWR);
+        motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
         motorScoopLeft.setPower(0.0);
         motorScoopRight.setPower(0.0);
 
     }
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-

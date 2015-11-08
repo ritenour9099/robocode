@@ -82,7 +82,7 @@ abstract public class InitialPersonRescue_NoScoopFloor_Red extends OpMode{
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1000);
+        sleep(1500);
         motorScoopLeft.setPower(0.0);
         motorScoopRight.setPower(0.0);
 

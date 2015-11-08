@@ -1,6 +1,5 @@
-/**
- * Created by HuynhT311 on 10/5/2015.
- */
+//Time to Execute: 8 Seconds
+
 import java.lang.Override;
 
 import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
@@ -30,7 +29,6 @@ public void init() {
     @Override
 public void start() {
 
-        sleep(1000);
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);

@@ -1,4 +1,4 @@
-//Time To Execute: 9 Seconds
+//Time To Execute: 5 Seconds
 import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 abstract public class InitialPersonRescue_NoScoopFloor_Blue extends OpMode{
-    DcMotor motorFrontLeft;
+     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
     DcMotor motorBackRight;
@@ -33,21 +33,13 @@ abstract public class InitialPersonRescue_NoScoopFloor_Blue extends OpMode{
     @Override
     public void start() {
 
-        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-
-        sleep(1000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
-
-        sleep(1000);
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(-TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackRight.setPower(-TREAD_MOTOR_PWR);
+
+        sleep(1000);
+        motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
@@ -55,16 +47,12 @@ abstract public class InitialPersonRescue_NoScoopFloor_Blue extends OpMode{
         motorFrontRight.setPower(0.0);
         motorBackLeft.setPower(0.0);
         motorBackRight.setPower(0.0);
-
-        sleep(1000);
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
         motorScoopLeft.setPower(0.0);
         motorScoopRight.setPower(0.0);
-
-        sleep(1000);
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(-TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
@@ -75,8 +63,6 @@ abstract public class InitialPersonRescue_NoScoopFloor_Blue extends OpMode{
         motorFrontRight.setPower(0.0);
         motorBackLeft.setPower(0.0);
         motorBackRight.setPower(0.0);
-
-        sleep(1000);
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 

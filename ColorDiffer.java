@@ -20,7 +20,7 @@ DeviceInterfaceModule cdim;
 
         ColorFunction(String color){
 
-                // i think this is how we get the color from th the light sensor
+                // i think this is how we get the color from the light sensor
                 sensorRGB = hardwareMap.colorSensor.get("color");
 
 

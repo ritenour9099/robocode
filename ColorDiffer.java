@@ -22,5 +22,9 @@ DeviceInterfaceModule cdim;
 
                 // i think this is how we get the color from the light sensor
                 sensorRGB = hardwareMap.colorSensor.get("color");
-
+                
+                // this may not work
+                red = sensorRGB.red()
+                green = sensorRGB.green()
+                blue = sensorRGB.blue()
 

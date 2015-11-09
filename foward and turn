@@ -1,3 +1,14 @@
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+
+import java.lang.Override;
+
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
 public class StartingToCentral extends OpMode {
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;

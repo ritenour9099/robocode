@@ -24,7 +24,7 @@ DeviceInterfaceModule cdim;
                 sensorRGB = hardwareMap.colorSensor.get("color");
                 
                 // this may not work
-                red = sensorRGB.red()
-                green = sensorRGB.green()
-                blue = sensorRGB.blue()
+                float red = sensorRGB.red()
+                float green = sensorRGB.green()
+                float blue = sensorRGB.blue()
 

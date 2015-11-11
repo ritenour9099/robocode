@@ -28,3 +28,21 @@ DeviceInterfaceModule cdim;
                 float green = sensorRGB.green()
                 float blue = sensorRGB.blue()
 
+                // not complete. I still need to figure out how to check the values
+                if(color == blue) 
+                {
+                        
+                }
+                
+                else if(color == red)
+                {
+                        
+                }
+                
+                else
+                {
+                        // here is where we will print an error to the system log
+                }
+                
+        }
+}

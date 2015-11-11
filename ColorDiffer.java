@@ -17,6 +17,7 @@ public class ColorDiffer {
 
 ColorSensor sensorRGB;
 DeviceInterfaceModule cdim;
+string Opmode;
 
         ColorFunction(String color){
 
@@ -24,17 +25,17 @@ DeviceInterfaceModule cdim;
                 sensorRGB = hardwareMap.colorSensor.get("color");
                 
                 // this may not work
-                float red = sensorRGB.red()
-                float green = sensorRGB.green()
-                float blue = sensorRGB.blue()
+                float red = sensorRGB.red();
+                float green = sensorRGB.green();
+                float blue = sensorRGB.blue();
 
                 // not complete. I still need to figure out how to check the values
-                if(color == blue) 
+                if(blue > 150 && red < 25) 
                 {
                         
                 }
                 
-                else if(color == red)
+                else if(red > 150 && blue < 25)
                 {
                         
                 }

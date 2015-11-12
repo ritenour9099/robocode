@@ -34,17 +34,15 @@ abstract public class BeaconRepairZone extends OpMode{
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
-
+        //robot goes forward
+      
         sleep(1000)
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
+
+        //robot turns left
 
         sleep(1000)
         motorFrontLeft.setPower(0.0);
@@ -52,17 +50,6 @@ abstract public class BeaconRepairZone extends OpMode{
         motorBackLeft.setPower(0.0);
         motorBackRight.setPower(0.0);
         
-        sleep(1000)
-        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-
-        sleep(1000)
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
 
         //robot ends up in the beacon repair zone with the scoop(front of robot) in the light sensor box's direction
 

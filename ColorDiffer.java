@@ -17,6 +17,9 @@ public class ColorDiffer {
 
 ColorSensor sensorRGB;
 DeviceInterfaceModule cdim;
+// we assume that the LED pin of the RGB sensor is connected to
+// digital port 5 (zero indexed). i think this is required
+static final int LED_CHANNEL = 5
 string Opmode;
 
 

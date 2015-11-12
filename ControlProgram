@@ -60,10 +60,14 @@ public class GhostControl extends OpMode{
 
             motorFrontRight.setPower(-TREAD_MOTOR_PWR);
             motorBackRight.setPower(-TREAD_MOTOR_PWR);
+            motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+            motorBackLeft.setPower(TREAD_MOTOR_PWR);
 
         }else if (gamepad1.rightstick.x < -deadzone) {
             motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
             motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+            motorFrontRight.setPower(TREAD_MOTOR_PWR);
+            motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         }
         if (gamepad2.a) {

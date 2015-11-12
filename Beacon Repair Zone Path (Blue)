@@ -46,10 +46,7 @@ abstract public class BeaconRepairZone extends OpMode{
        
         sleep(1000)
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-
      
         // robot goes forward
       

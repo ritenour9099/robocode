@@ -32,12 +32,12 @@ string Opmode;
                 float blue = sensorRGB.blue();
 
                 // i still need to pass the color variables to the functions
-                if(Opmode == "blue") 
+                if(Opmode == "BLUE") 
                 {
                         blue_botton();
                 }
                 
-                else if(Opmode == "red")
+                else if(Opmode == "RED")
                 {
                         red_botton();
                 }

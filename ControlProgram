@@ -1,0 +1,101 @@
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+
+import java.lang.Override;
+
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+public class GhostControl extends OpMode{
+
+
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    DcMotor spinningMotor;
+    DcMotor bucketMotor1;
+    DcMotor bucketMotor2;
+    private DcMotorController dcMotorDriveController;
+    float deadzone = 0.2;
+
+    @Override
+    public void init() {
+        final static double TREAD_MOTOR_PWR = 0.75;
+
+        dcMotorDriveController = hardwareMap.dcMotorController.get("drive_controller");
+        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
+        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
+        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
+        motorBackight = hardwareMap.dcMotor.get("motor_4");
+    }
+
+    @Override
+    public void loop(){
+        //Move this to the bottom
+        if (gamepad1.leftstick.y < deadzone && gamepad1.leftstick.y > -deadzone  && gamepad1.rightstick.x < deadzone && gamepade1.rightstick.x > -deadzone) {
+            motorFrontLeft.setPower(0.0);
+            motorBackLeft.setPower(0.0);
+            motorFrontRight.setPower(0.0);
+            motorBackRight.setPower(0.0);
+
+        }if (gamepad2.a == false);
+            spinningMotor(0.0);
+
+        if (gamepad1.leftstick.y > deadzone){
+            motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+            motorBackLeft.setPower(TREAD_MOTOR_PWR);
+            motorFrontRight.setPower(TREAD_MOTOR_PWR);
+            motorBackRight.setPower(TREAD_MOTOR_PWR);
+
+        }else if(gamepad1.leftstick.y < -deadzone){
+            motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+            motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+            motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+            motorBackRight.setPower(-TREAD_MOTOR_PWR);
+
+        }if (gamepad1.rightstick.x > deadzone) {
+
+            motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+            motorBackRight.setPower(-TREAD_MOTOR_PWR);
+
+        }else if (gamepad1.rightstick.x < -deadzone) {
+            motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+            motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+
+        }
+        if (gamepad2.a) {
+            spinningMotor.setPower(TREAD_MOTOR_PWR);
+
+        }if (gamepad2.y){
+            bucketMotor1.setPower(TREAD_MOTOR_PWR);
+            bucketMotor2.setPower(TREAD_MOTOR_PWR);
+            wait(1000);
+            bucketMotor1.setPower(0.0);
+            bucketMotor2.setPower(TREAD_MOTOR_PWR);
+            wait(1000);
+            bucketMotor2.setPower(0.0);
+            wait(2000);
+            bucketMotor2.setPower(-TREAD_MOTOR_PWR);
+            wait(1000);
+            bucketMotor1.setPower(-TREAD_MOTOR_PWR);
+            bucketMotor2.setPower(-TREAD_MOTOR_PWR);
+        }if (gamepad2.x) {
+            bucketMotor1.setPower(TREAD_MOTOR_PWR);
+            bucketMotor2.setPower(TREAD_MOTOR_PWR);
+            wait(1000);
+            bucketMotor1.setPower(TREAD_MOTOR_PWR);
+            bucketMotor2.setPower(0.0);
+            wait(1000);
+            bucketMotor1.setPower(0.0);
+            wait(2000);
+            bucketMotor1.setPower(-TREAD_MOTOR_PWR);
+            wait(1000);
+            bucketMotor1.setPower(-TREAD_MOTOR_PWR);
+            bucketMotor2.setPower(-TREAD_MOTOR_PWR);
+
+        }
+    }
+}

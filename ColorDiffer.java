@@ -22,7 +22,43 @@ DeviceInterfaceModule cdim;
 static final int LED_CHANNEL = 5;
 public static string Opmode;
 
+        blue_botton(float b = sensorRGB.blue(),float r = sensorRGB.red())
+        {
+                // not complete. I still need to figure out how to check the values
+                if(b > 150 && r < 25) 
+                {
+                        
+                }
+                
+                else if(r > 150 && b < 25)
+                {
+                        
+                }
+                
+                else
+                {
+                        // here is where we will print an error to the system log
+                }
+        }
 
+        red_botton(float b = sensorRGB.blue(),float r = sensorRGB.red())
+        {
+                // not complete. I still need to figure out how to check the values
+                if(b > 150 && r < 25) 
+                {
+                        
+                }
+                
+                else if(r > 150 && b < 25)
+                {
+                        
+                }
+                
+                else
+                {
+                        // here is where we will print an error to the system log
+                }
+        }
 
         ColorFunction(String color){
 
@@ -37,50 +73,12 @@ public static string Opmode;
                 // i still need to pass the color variables to the functions
                 if(Opmode == "BLUE") 
                 {
-                        blue_botton();
+                        blue_botton(blue,red);
                 }
                 
                 else if(Opmode == "RED")
                 {
-                        red_botton();
-                }
-                
-                else
-                {
-                        // here is where we will print an error to the system log
-                }
-        }
-        
-        blue_botton()
-        {
-                // not complete. I still need to figure out how to check the values
-                if(blue > 150 && red < 25) 
-                {
-                        
-                }
-                
-                else if(red > 150 && blue < 25)
-                {
-                        
-                }
-                
-                else
-                {
-                        // here is where we will print an error to the system log
-                }
-        }
-
-        red_botton()
-        {
-                // not complete. I still need to figure out how to check the values
-                if(blue > 150 && red < 25) 
-                {
-                        
-                }
-                
-                else if(red > 150 && blue < 25)
-                {
-                        
+                        red_botton(blue,red);
                 }
                 
                 else
@@ -89,4 +87,3 @@ public static string Opmode;
                 }
         }
 }
-

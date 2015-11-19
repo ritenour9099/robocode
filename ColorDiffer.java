@@ -13,7 +13,12 @@ import com.qualcomm.robotcore.hardware.DigitalChannelController;
 // other things to import depends on decisions later
 
 //extends LinearOpMode
-public class ColorDiffer {
+public class ColorDiffer extends OpMode{
+
+DcMotor LeftFront;
+DcMotor RightFront;
+DcMotor LeftBack;
+DcMotor RightBack;
 
 ColorSensor sensorRGB;
 DeviceInterfaceModule cdim;
@@ -21,7 +26,16 @@ DeviceInterfaceModule cdim;
 // digital port 5 (zero indexed). i think this is required
 static final int LED_CHANNEL = 5;
 public static string Opmode;
+        
+        public void init()
+        {
+                LeftFront = hardwaretMap.dcMotor.get("motor_1");
+                RightFront = hardwareMap.dcMotor.get("motor_2");
+                LeftBack = hardwareMap.dcMotor.get("motor_3");
+                RightBack = hardwareMap.dcMotor.get("motor_4");
 
+        }
+        
         blue_botton(float b = sensorRGB.blue(),float r = sensorRGB.red())
         {
                 // not complete. I still need to figure out how to check the values

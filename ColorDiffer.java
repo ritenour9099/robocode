@@ -74,7 +74,7 @@ public static string Opmode;
                 }
         }
 
-        ColorFunction(String color){
+        ColorFunction(){
 
                 // i think this is how we get the color from the light sensor
                 sensorRGB = hardwareMap.colorSensor.get("color");

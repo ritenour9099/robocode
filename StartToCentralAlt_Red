@@ -10,10 +10,8 @@ import java.lang.Override;
 
 import static java.lang.Thread.*;
 
-/**
- * Created by Shannyn on 11/20/2015.
- */
-public abstract class StartToCentralAlt_Blue extends LinearOpMode {
+
+public abstract class StartToCentralAlt_Red extends LinearOpMode {
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

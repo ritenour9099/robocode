@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
 import static java.lang.Thread.*;
-public abstract class ParkingMoutainMedZone_Red extends LinearOpMode{
+public abstract class ParkingMoutainMedZone_Blue extends LinearOpMode{
 
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
@@ -29,10 +29,10 @@ public abstract class ParkingMoutainMedZone_Red extends LinearOpMode{
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
 
 
-        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackRight.setPower(-TREAD_MOTOR_PWR);
         
         Thread.sleep(2000);
 

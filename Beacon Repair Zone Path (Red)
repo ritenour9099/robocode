@@ -57,22 +57,7 @@ public abstract class BeaconRepairZone extends LinearOpMode{
         
 
         //robot ends up in the beacon repair zone with the scoop(front of robot) in the light sensor box's direction
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
 }
 
 

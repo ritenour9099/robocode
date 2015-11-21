@@ -1,4 +1,4 @@
-//Time To Execute: 7 Seconds
+//Time To Execute: 4 Seconds
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;

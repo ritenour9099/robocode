@@ -21,7 +21,7 @@ public abstract class AllianceFloorGoalPath_Red extends LinearOpMode{
     DcMotor motorScoopRight;
     final static double TREAD_MOTOR_PWR = 0.75;
 
-     @Override
+    @Override
     public void runOpMode() throws InterruptedException {
         motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
         motorFrontRight = hardwareMap.dcMotor.get("motor_2");

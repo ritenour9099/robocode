@@ -1,16 +1,19 @@
 //Time To Execute: 5.5 Seconds
+
+package com.qualcomm.ftcrobotcontroller.opmodes;
+
 import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 
 import java.lang.Override;
 
-import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.DcMotor;
+import static java.lang.Thread.*;
 
-abstract public class InitialPersonRescue_ScoopFloor_Blue extends OpMode{
+
+public abstract class InitialPersonRescue_ScoopFloor_Blue extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
@@ -18,31 +21,26 @@ abstract public class InitialPersonRescue_ScoopFloor_Blue extends OpMode{
     DcMotor motorScoopLeft;
     DcMotor motorScoopRight;
     final static double TREAD_MOTOR_PWR = 0.75;
-    final static double MOTOR_POWER = 0.15;
-    @Override
-
-    public void init() {
+    
+     @Override
+    public void runOpMode() throws InterruptedException {
         motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
         motorFrontRight = hardwareMap.dcMotor.get("motor_2");
         motorBackLeft = hardwareMap.dcMotor.get("motor_3");
         motorBackRight = hardwareMap.dcMotor.get("motor_4");
         motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
-    }
-
-    @Override
-    public void start() {
-
+        
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(-TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
 
-        sleep(1000);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
+        Thread.sleep(1000);
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1000);
+        Thread.sleep(1000);
         motorFrontLeft.setPower(0.0);
         motorFrontRight.setPower(0.0);
         motorBackLeft.setPower(0.0);
@@ -50,7 +48,7 @@ abstract public class InitialPersonRescue_ScoopFloor_Blue extends OpMode{
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1000);
+        Thread.sleep(1000);
         motorScoopLeft.setPower(0.0);
         motorScoopRight.setPower(0.0);
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
@@ -58,7 +56,7 @@ abstract public class InitialPersonRescue_ScoopFloor_Blue extends OpMode{
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
 
-        sleep(1000);
+        Thread.sleep(1000);
         motorFrontLeft.setPower(0.0);
         motorFrontRight.setPower(0.0);
         motorBackLeft.setPower(0.0);
@@ -66,7 +64,7 @@ abstract public class InitialPersonRescue_ScoopFloor_Blue extends OpMode{
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        sleep(1500);
+        Thread.sleep(1500);
         motorScoopLeft.setPower(0.0);
         motorScoopRight.setPower(0.0);
 

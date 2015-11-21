@@ -20,6 +20,7 @@ DcMotor LeftFront;
 DcMotor RightFront;
 DcMotor LeftBack;
 DcMotor RightBack;
+final double TREAD_MOTOR_PWR = 0.5;
 
 ColorSensor sensorRGB;
 DeviceInterfaceModule cdim;

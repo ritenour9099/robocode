@@ -12,7 +12,7 @@ import java.lang.Override;
 
 import static java.lang.Thread.*;
 
-public abstract class AllianceFloorGoalPath_Red extends LinearOpMode{
+public abstract class AllianceFloorGoalPath_Blue extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

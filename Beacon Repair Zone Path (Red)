@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
 import static java.lang.Thread.*;
-public abstract class BeaconRepairZone extends LinearOpMode{
+public abstract class BeaconRepairZone_Red extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

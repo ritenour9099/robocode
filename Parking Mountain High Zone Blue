@@ -11,7 +11,7 @@ import java.lang.Override;
 
 import static java.lang.Thread.*;
 
-public abstract class ParkingMoutainHighZone_Red extends LinearOpMode{
+public abstract class ParkingMoutainHighZone_Blue extends LinearOpMode{
 
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;

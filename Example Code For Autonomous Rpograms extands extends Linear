@@ -1,0 +1,39 @@
+//NOT FREAKING DONE
+package com.qualcomm.ftcrobotcontroller.opmodes;
+
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+
+import java.lang.Override;
+
+import static java.lang.Thread.*;
+
+public abstract class AutonomousExample extends LinearOpMode{
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    final double TREAD_MOTOR_PWR = 0.5;
+    int number=2;
+    DcMotor motor;
+    StartToCentralAlt_Red classVariableExample;
+    InitialPersonRescue_ScoopFloor_Red classVariableExampleTwo;
+    
+    @Override
+    public void runOpMode() throws InterruptedException {
+      motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
+      motorFrontRight = hardwareMap.dcMotor.get("motor_2");
+      motorBackLeft = hardwareMap.dcMotor.get("motor_3");
+      motorBackRight = hardwareMap.dcMotor.get("motor_4");
+
+      waitForStart();
+      
+      //This is where we call upon each of the methods to be used
+      classVariableExample.runOpMode(); //5.5 Seconds Total Seconds:5.5 Seconds
+      classVariableExampleTwo.ronOpMode(); //5.5 Seconds Total Seconds:11 Seconds
+      
+      
+    }

@@ -14,7 +14,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 // other things to import depends on decisions later
 
 //extends LinearOpMode
-public class ColorDiffer extends OpMode{
+public abstract class ColorDiffer extends LinearOpMode{
 
 DcMotor LeftFront;
 DcMotor RightFront;
@@ -27,15 +27,17 @@ DeviceInterfaceModule cdim;
 // we assume that the LED pin of the RGB sensor is connected to
 // digital port 5 (zero indexed). i think this is required
 static final int LED_CHANNEL = 5;
-public static string Opmode;
         
-        public void init()
+        @Override 
+        public void runOpMode()
         {
-                LeftFront = hardwaretMap.dcMotor.get("motor_1");
-                RightFront = hardwareMap.dcMotor.get("motor_2");
-                LeftBack = hardwareMap.dcMotor.get("motor_3");
-                RightBack = hardwareMap.dcMotor.get("motor_4");
+            LeftFront = hardwaretMap.dcMotor.get("motor_1");
+            RightFront = hardwareMap.dcMotor.get("motor_2");
+            LeftBack = hardwareMap.dcMotor.get("motor_3");
+            RightBack = hardwareMap.dcMotor.get("motor_4");
 
+			waitForStart();
+			ColorFunction();
         }
         
         blue_botton(float b = sensorRGB.blue(),float r = sensorRGB.red())
@@ -43,17 +45,33 @@ public static string Opmode;
                 // not complete. I still need to figure out how to check the values
                 if(b > 150 && r < 25) 
                 {
-                        
+                    LeftFront.setPower(TREAD_MOTOR_PWR);
+                    LeftBack.setPower(TREAD_MOTOR_PWR);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);
                 }
                 
                 else if(r > 150 && b < 25)
                 {
-                        
+                    LeftFront.setPower(-0.5);
+                    LeftBack.setPower(-0.5);
+                    RightFront.setPower(-0.5);
+                    RightBack.setPower(-0.5); 
+                    
+                    LeftFront.setPower(-0.5);
+                    LeftBack.setPower(-0.5);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);
+                    
+                    LeftFront.setPower(TREAD_MOTOR_PWR);
+                    LeftBack.setPower(TREAD_MOTOR_PWR);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);   
                 }
                 
                 else
                 {
-                        // here is where we will print an error to the system log
+                    // here is where we will print an error to the system log
                 }
         }
 
@@ -62,21 +80,37 @@ public static string Opmode;
                 // not complete. I still need to figure out how to check the values
                 if(b > 150 && r < 25) 
                 {
-                        
+                    LeftFront.setPower(-0.5);
+                    LeftBack.setPower(-0.5);
+                    RightFront.setPower(-0.5);
+                    RightBack.setPower(-0.5); 
+                    
+                    LeftFront.setPower(-0.5);
+                    LeftBack.setPower(-0.5);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);  
+                    
+                    LeftFront.setPower(TREAD_MOTOR_PWR);
+                    LeftBack.setPower(TREAD_MOTOR_PWR);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);
                 }
                 
                 else if(r > 150 && b < 25)
                 {
-                        
+                    LeftFront.setPower(TREAD_MOTOR_PWR);
+                    LeftBack.setPower(TREAD_MOTOR_PWR);
+                    RightFront.setPower(TREAD_MOTOR_PWR);
+                    RightBack.setPower(TREAD_MOTOR_PWR);    
                 }
                 
                 else
                 {
-                        // here is where we will print an error to the system log
+                    // here is where we will print an error to the system log
                 }
         }
 
-        ColorFunction(){
+        ColorFunction(string Opmode){
 
                 // i think this is how we get the color from the light sensor
                 sensorRGB = hardwareMap.colorSensor.get("color");
@@ -89,17 +123,17 @@ public static string Opmode;
                 // i still need to pass the color variables to the functions
                 if(Opmode == "BLUE") 
                 {
-                        blue_botton(blue,red);
+                    blue_botton(blue,red);
                 }
                 
                 else if(Opmode == "RED")
                 {
-                        red_botton(blue,red);
+                    red_botton(blue,red);
                 }
                 
                 else
                 {
-                        // here is where we will print an error to the system log
+                    // here is where we will print an error to the system log
                 }
         }
 }

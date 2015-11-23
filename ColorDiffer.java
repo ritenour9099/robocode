@@ -36,8 +36,8 @@ static final int LED_CHANNEL = 5;
             LeftBack = hardwareMap.dcMotor.get("motor_3");
             RightBack = hardwareMap.dcMotor.get("motor_4");
 
-			waitForStart();
-			ColorFunction();
+	    waitForStart();
+	    ColorFunction();
         }
         
         blue_botton(float b = sensorRGB.blue(),float r = sensorRGB.red())

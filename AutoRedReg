@@ -21,7 +21,6 @@ public abstract class AutoRedReg extends LinearOpMode{
     final double TREAD_MOTOR_PWR = 0.5;
     int number=2;
     DcMotor motor;
-    StartToCentralReg_Red classVariableExample;
     InitialPersonRescue_NoScoopFloor_Red classVariableExampleTwo;
     StartToCentralReg_Red classVariableExampleThree;
     ColorStuffWithReturntoCentral classVariableExampleFour;

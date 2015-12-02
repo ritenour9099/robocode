@@ -21,8 +21,8 @@ public abstract class AutoRedReg extends LinearOpMode{
     final double TREAD_MOTOR_PWR = 0.5;
     int number=2;
     DcMotor motor;
-    InitialPersonRescue_NoScoopFloor_Red classVariableExampleTwo;
-    StartToCentralReg_Red classVariableExampleThree;
+    StartToCentralReg_Red classVariableExampleTwo;
+    InitialPersonRescue_NoScoopFloor_Red classVariableExampleThree;
     ColorStuffWithReturntoCentral classVariableExampleFour;
     ParkingMountainHighZone_Red classVariableExampleFive;
     @Override
@@ -35,8 +35,8 @@ public abstract class AutoRedReg extends LinearOpMode{
         waitForStart();
 
         //This is where we call upon each of the methods to be used
-        classVariableExampleThree.runOpMode(); //4 Seconds Total Seconds:5.0 Seconds
-        classVariableExampleTwo.runOpMode(); //5.0 Seconds Total Seconds:9.0 Seconds
+        classVariableExampleTwo.runOpMode(); //4 Seconds Total Seconds:5.0 Seconds
+        classVariableExampleThree.runOpMode(); //5.0 Seconds Total Seconds:9.0 Seconds
         classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 9.0 Seconds
         classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 16.0 Seconds
         

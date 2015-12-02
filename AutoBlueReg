@@ -21,14 +21,10 @@ public abstract class AutoRedReg extends LinearOpMode{
     final double TREAD_MOTOR_PWR = 0.5;
     int number=2;
     DcMotor motor;
-    StartToCentralAlt_Red classVariableExample;
-    InitialPersonRescue_ScoopFloor_Red classVariableExampleTwo;
-    StartToCentralReg_Red classVariableExampleThree;
+    InitialPersonRescue_NoScoopFloor_Blue classVariableExampleTwo;
+    StartToCentralReg_Blue classVariableExampleThree;
     ColorStuffWithReturntoCentral classVariableExampleFour;
-    ParkingMountainHighZone_Red classVariableExampleFive;
-    StartToCentralReg_Blue classVariableExampleSix;
-    
-    
+    ParkingMountainHighZone_Blue classVariableExampleFive;
     @Override
     public void runOpMode() throws InterruptedException {
         motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
@@ -39,9 +35,9 @@ public abstract class AutoRedReg extends LinearOpMode{
         waitForStart();
 
         //This is where we call upon each of the methods to be used
-        classVariableExampleSix.runOpMode(); //4 Seconds Total Seconds:5.5 Seconds
-        classVariableExampleTwo.runOpMode(); //5.5 Seconds Total Seconds:9.5 Seconds
-        classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 9.5 Seconds
-        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 16.5 Seconds
+        classVariableExampleThree.runOpMode(); //4 Seconds Total Seconds:5.0 Seconds
+        classVariableExampleTwo.runOpMode(); //5.5 Seconds Total Seconds:9.0 Seconds
+        classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 9.0 Seconds
+        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 16.0 Seconds
         
     }

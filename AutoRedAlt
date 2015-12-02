@@ -36,8 +36,8 @@ public abstract class AutoRedAlt extends LinearOpMode{
 
         //This is where we call upon each of the methods to be used
         classVariableExampleTwo.runOpMode(); //6 Seconds Total Seconds: 4.0 Seconds
-        classVariableExampleThree.runOpMode(); //5.5 Seconds Total Seconds: 11.5 Seconds
-        classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 11.5 Seconds
-        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 18.5 Seconds
+        classVariableExampleThree.runOpMode(); //5.0 Seconds Total Seconds: 11.0 Seconds
+        classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 11.0 Seconds
+        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 18.0 Seconds
         
     }

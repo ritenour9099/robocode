@@ -1,0 +1,46 @@
+/**
+ * Created by HuynhT311 on 11/30/2015.
+ */
+package com.qualcomm.ftcrobotcontroller.opmodes;
+
+import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+
+import java.lang.Override;
+
+import static java.lang.Thread.*;
+
+public abstract class AutoRedReg extends LinearOpMode{
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    final double TREAD_MOTOR_PWR = 0.5;
+    int number=2;
+    DcMotor motor;
+    StartToCentralReg_Red classVariableExampleTwo;
+    InitialPersonRescue_NoScoopFloor_Red classVariableExampleThree;
+    ColorStuffWithReturntoCentral classVariableExampleFour;
+    ParkingMountainHighZone_Red classVariableExampleFive;
+    ReturnMountainHighZone_Red classVariableExampleSix;
+    @Override
+    public void runOpMode() throws InterruptedException {
+        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
+        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
+        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
+        motorBackRight = hardwareMap.dcMotor.get("motor_4");
+
+        waitForStart();
+
+        //This is where we call upon each of the methods to be used
+        classVariableExampleTwo.runOpMode(); //4 Seconds Total Seconds:4.0 Seconds
+        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds:11.0 Seconds
+        classVariableExampleSix.runOpMode(); //7 Seconds Total Seconds:18.0 Seconds
+        classVariableExampleThree.runOpMode(); //5 Seconds Total Seconds:23.0 Seconds
+        classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 23.0 Seconds
+        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 30.0 Seconds
+        
+    }

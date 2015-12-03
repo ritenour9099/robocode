@@ -26,6 +26,7 @@ public abstract class AutoRedReg extends LinearOpMode{
     ColorStuffWithReturntoCentral classVariableExampleFour;
     ParkingMountainHighZone_Red classVariableExampleFive;
     ReturnMountainHighZone_Red classVariableExampleSix;
+    BeaconRepairZone_Red classVariableExampleSeven;
     @Override
     public void runOpMode() throws InterruptedException {
         motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
@@ -41,6 +42,6 @@ public abstract class AutoRedReg extends LinearOpMode{
         classVariableExampleSix.runOpMode(); //7 Seconds Total Seconds:18.0 Seconds
         classVariableExampleThree.runOpMode(); //5 Seconds Total Seconds:23.0 Seconds
         classVariableExampleFour.runOpMode(); //X Seconds Total Seconds: X + 23.0 Seconds
-        classVariableExampleFive.runOpMode(); //7 Seconds Total Seconds: X + 30.0 Seconds
+        classVariableExampleSeven.runOpMode(); //3 Seconds Total Seconds: X + 26.0 Seconds
         
     }

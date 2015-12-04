@@ -13,7 +13,7 @@ import java.lang.Override;
 
 import static java.lang.Thread.*;
 
-public abstract class AutoRedReg extends LinearOpMode{
+public abstract class AutoBlueMountainPark extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

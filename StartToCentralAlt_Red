@@ -1,30 +1,24 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
-
-import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-
-
 import java.lang.Override;
-
-import static java.lang.Thread.*;
-
 
 public abstract class StartToCentralAlt_Red extends LinearOpMode {
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
     DcMotor motorBackRight;
-    final double TREAD_MOTOR_PWR = 0.5;
+    final double TREAD_MOTOR_PWR = 1.0;
 
 
     @Override
     public void runOpMode() throws InterruptedException {
-        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
-        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
-        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
-        motorBackRight = hardwareMap.dcMotor.get("motor_4");
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
 
         waitForStart();
 
@@ -32,29 +26,23 @@ public abstract class StartToCentralAlt_Red extends LinearOpMode {
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
-        Thread.sleep(2000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
-        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
+        
+        sleep(2000);
+        
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR); 
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
-        Thread.sleep(2000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
+        
+        Thread.sleep(2000); 
+        
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackRight.setPower(TREAD_MOTOR_PWR);
+        
         Thread.sleep(2000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
+        
+        motorFrontLeft.setPowerFloat();
+        motorFrontRight.setPowerFloat();
+        motorBackLeft.setPowerFloat();
+        motorBackRight.setPowerFloat();
     }
 }
 

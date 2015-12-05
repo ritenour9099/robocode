@@ -1,15 +1,7 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
-
-import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-
-
 import java.lang.Override;
-
-import static java.lang.Thread.*;
-
 
 public abstract class StartToCentralReg_Blue extends LinearOpMode {
     DcMotor motorFrontLeft;

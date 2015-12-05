@@ -4,14 +4,14 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
-public abstract class InitialPersonRescue_ScoopFloor_Red extends LinearOpMode{
+public class InitialPersonRescue_ScoopFloor_Red extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
     DcMotor motorBackRight;
     DcMotor motorScoopLeft;
     DcMotor motorScoopRight;
-    final static double TREAD_MOTOR_PWR = 1;
+    final double TREAD_MOTOR_PWR = 1;
     
      @Override
     public void runOpMode() throws InterruptedException {

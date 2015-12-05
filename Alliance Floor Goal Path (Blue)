@@ -22,8 +22,7 @@ public class AllianceFloorGoalPath_Blue extends LinearOpMode{
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
         motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
         motorBackRight.setDirection(DcMotor.Direction.REVERSE);
-
-        waitForStart();
+        
 
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(-TREAD_MOTOR_PWR);

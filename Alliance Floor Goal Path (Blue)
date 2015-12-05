@@ -3,13 +3,13 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
-public class AllianceFloorGoalPath_Red extends LinearOpMode{
+public class AllianceFloorGoalPath_Blue extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
     DcMotor motorBackRight;
-    //DcMotor motorScoopLeft;
-    //DcMotor motorScoopRight;
+    DcMotor motorScoopLeft;
+    DcMotor motorScoopRight;
     final static double TREAD_MOTOR_PWR = 1.0;
 
     @Override
@@ -18,8 +18,8 @@ public class AllianceFloorGoalPath_Red extends LinearOpMode{
         motorFrontRight = hardwareMap.dcMotor.get("right_front");
         motorBackLeft = hardwareMap.dcMotor.get("left_back");
         motorBackRight = hardwareMap.dcMotor.get("right_back");
-        //motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
-        //motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
+        motorScoopRight = hardwareMap.dcMotor.get("motor_6");
         motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
         motorBackRight.setDirection(DcMotor.Direction.REVERSE);
 

@@ -16,10 +16,10 @@ public abstract class ParkingMoutainLowZone_Blue extends LinearOpMode{
 
     @Override
     public void runOpMode() throws InterruptedException {
-        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
-        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
-        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
-        motorBackRight = hardwareMap.dcMotor.get("motor_4");
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
         motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
         motorFrontRight.setDirection(DcMotor.Direction.REVERSE);

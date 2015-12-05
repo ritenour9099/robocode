@@ -21,17 +21,20 @@ public abstract class InitialPersonRescue_NoScoopFloor_Red extends LinearOpMode{
         motorBackRight = hardwareMap.dcMotor.get("right_back");
         motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
+        
         
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
         motorBackLeft.setPowerFloat();
@@ -39,7 +42,7 @@ public abstract class InitialPersonRescue_NoScoopFloor_Red extends LinearOpMode{
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorScoopLeft.setPowerFloat();
         motorScoopRight.setPowerFloat();
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
@@ -47,7 +50,7 @@ public abstract class InitialPersonRescue_NoScoopFloor_Red extends LinearOpMode{
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
         motorBackLeft.setPowerFloat();
@@ -55,7 +58,7 @@ public abstract class InitialPersonRescue_NoScoopFloor_Red extends LinearOpMode{
         motorScoopLeft.setPower(TREAD_MOTOR_PWR);
         motorScoopRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorScoopLeft.setPowerFloat();
         motorScoopRight.setPowerFloat();
 

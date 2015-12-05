@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override; 
 
-public abstract class ParkingMoutainMedZone_Blue extends LinearOpMode{
+public class ParkingMoutainMedZone_Blue extends LinearOpMode{
 
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
@@ -12,7 +12,7 @@ public abstract class ParkingMoutainMedZone_Blue extends LinearOpMode{
     DcMotor motorBackRight;
     DcMotor motorScoopLeft;
     DcMotor motorScoopRight;
-    final static double TREAD_MOTOR_PWR = 1.0;
+    final double TREAD_MOTOR_PWR = 1.0;
 
     @Override
     public void runOpMode() throws InterruptedException {

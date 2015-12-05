@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
 
-public abstract class ReturnMoutainHighZone_Red extends LinearOpMode{
+public class ReturnMoutainHighZone_Red extends LinearOpMode{
 
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
@@ -13,7 +13,7 @@ public abstract class ReturnMoutainHighZone_Red extends LinearOpMode{
     DcMotor motorBackRight;
     DcMotor motorScoopLeft;
     DcMotor motorScoopRight;
-    final double TREAD_MOTOR_PWR = 1.0;
+    final TREAD_MOTOR_PWR = 1.0;
     
     @Override
     public void runOpMode() throws InterruptedException {

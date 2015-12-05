@@ -21,8 +21,10 @@ public class BeaconRepairZone_Blue extends LinearOpMode{
         motorBackRight = hardwareMap.dcMotor.get("right_back");
         motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
         
-        waitForStart();
+
         
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
@@ -31,7 +33,7 @@ public class BeaconRepairZone_Blue extends LinearOpMode{
 
         //robot goes forward
       
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(-TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
@@ -39,13 +41,13 @@ public class BeaconRepairZone_Blue extends LinearOpMode{
 
         //robot turns right
 
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
         
         //robot starts going forward
        
-        Thread.sleep(1000);
+        sleep(1000);
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
         motorBackLeft.setPowerFloat();

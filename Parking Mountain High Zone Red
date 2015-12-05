@@ -31,7 +31,7 @@ public abstract class ParkingMoutainHighZone_Red extends LinearOpMode{
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
         
-        Thread.sleep(2000);
+        sleep(2000);
 
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
@@ -43,7 +43,7 @@ public abstract class ParkingMoutainHighZone_Red extends LinearOpMode{
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(5000);
+        sleep(5000);
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
         motorBackLeft.setPowerFloat();

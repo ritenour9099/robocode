@@ -31,14 +31,14 @@ public abstract class ParkingMoutainMedZone_Blue extends LinearOpMode{
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
         
-        Thread.sleep(2000);
+        sleep(2000);
 
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(3500);
+        sleep(3500);
         
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();

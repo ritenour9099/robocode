@@ -1,66 +1,60 @@
-
-
 package com.qualcomm.ftcrobotcontroller.opmodes;
-
-import com.qualcomm.ftcrobotcontroller.opmodes.FtcOpModeRegister;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-
-
 import java.lang.Override;
 
-import static java.lang.Thread.*;
-
-public abstract class AllianceFloorGoalPath_Red extends LinearOpMode{
+public class AllianceFloorGoalPath_Red extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;
     DcMotor motorBackRight;
-    DcMotor motorScoopLeft;
-    DcMotor motorScoopRight;
-    final static double TREAD_MOTOR_PWR = 0.75;
+    //DcMotor motorScoopLeft;
+    //DcMotor motorScoopRight;
+    final static double TREAD_MOTOR_PWR = 1.0;
 
     @Override
     public void runOpMode() throws InterruptedException {
-        motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
-        motorFrontRight = hardwareMap.dcMotor.get("motor_2");
-        motorBackLeft = hardwareMap.dcMotor.get("motor_3");
-        motorBackRight = hardwareMap.dcMotor.get("motor_4");
-        motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
-        motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
+        //motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
+        //motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
 
-        Thread.sleep(1000);
+        waitForStart();
+
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         //robot turns left
-        
-        Thread.sleep(1000);
+
+        sleep(1000);
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
 
         //robot goes forward
-        
-        Thread.sleep(1000);
+
+        sleep(1000);
         motorFrontRight.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
 
         //robot turns right
-        
-        Thread.sleep(1000);
+
+        sleep(1000);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         //robot goes forward into the Red Alliance Zone
-        
-        Thread.sleep(1000);
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
+
+        sleep(1000);
+        motorFrontLeft.setPowerFloat();
+        motorFrontRight.setPowerFloat();
+        motorBackLeft.setPowerFloat();
+        motorBackRight.setPowerFloat();
 
         //the robot is now parked into the Red Alliance Zone with the Scoop facing the wall
 

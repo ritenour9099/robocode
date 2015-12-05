@@ -3,7 +3,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
-public abstract class StartToCentralAlt_Red extends LinearOpMode {
+public class StartToCentralAlt_Red extends LinearOpMode {
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

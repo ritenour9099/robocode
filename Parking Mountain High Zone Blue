@@ -23,6 +23,8 @@ public abstract class ParkingMoutainHighZone_Blue extends LinearOpMode{
         motorBackRight = hardwareMap.dcMotor.get("right_back");
         motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
         motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
 
 
         motorFrontLeft.setPower(TREAD_MOTOR_PWR);
@@ -30,12 +32,12 @@ public abstract class ParkingMoutainHighZone_Blue extends LinearOpMode{
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(-TREAD_MOTOR_PWR);
         
-        Thread.sleep(2000);
+        sleep(2000);
         
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
-        Thread.sleep(5000);
+        sleep(5000);
         motorFrontLeft.setPowerFloat();
         motorFrontRight.setPowerFloat();
         motorBackLeft.setPowerFloat();

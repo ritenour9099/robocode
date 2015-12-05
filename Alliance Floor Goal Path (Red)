@@ -10,7 +10,7 @@ public class AllianceFloorGoalPath_Red extends LinearOpMode{
     DcMotor motorBackRight;
     DcMotor motorScoopLeft;
     DcMotor motorScoopRight;
-    final static double TREAD_MOTOR_PWR = 1.0;
+    final double TREAD_MOTOR_PWR = 1.0;
 
     @Override
     public void runOpMode() throws InterruptedException {

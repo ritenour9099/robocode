@@ -12,20 +12,14 @@ import java.lang.Override;
 import static java.lang.Thread.*;
 
 public abstract class AutonomousExample extends LinearOpMode{
-    DcMotor motorFrontLeft;
-    DcMotor motorFrontRight;
-    DcMotor motorBackLeft;
-    DcMotor motorBackRight;
     final double TREAD_MOTOR_PWR = 0.5;
     StartToCentralAlt_Red classVariableExample;
     InitialPersonRescue_ScoopFloor_Red classVariableExampleTwo;
     
     @Override
     public void runOpMode() throws InterruptedException {
-      motorFrontLeft = hardwareMap.dcMotor.get("motor_1");
-      motorFrontRight = hardwareMap.dcMotor.get("motor_2");
-      motorBackLeft = hardwareMap.dcMotor.get("motor_3");
-      motorBackRight = hardwareMap.dcMotor.get("motor_4");
+    classVariableExample = new StartToCentralAlt_red();
+    classVariableExampleTwo = new InitialPersonResque();
 
       waitForStart();
       

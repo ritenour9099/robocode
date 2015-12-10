@@ -1,0 +1,83 @@
+//Time To Execute: 5 Seconds
+package com.qualcomm.ftcrobotcontroller.opmodes;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import java.lang.Override;
+
+public class NewInitialPersonRescue_Red extends LinearOpMode{
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    DcMotor motorScoopLeft;
+    DcMotor motorScoopRight;
+    final double TREAD_MOTOR_PWR = 1.0;
+    
+     @Override
+    public void runOpMode() throws InterruptedException {
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
+        motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
+        motorScoopRight = hardwareMap.dcMotor.get("motor_6");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
+        
+        // Are there still scoop motors? If not, we should rename them to the motors on the plow or the holders.
+        
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+        motorBackRight.setPower(TREAD_MOTOR_PWR);
+
+        sleep(1000);
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+
+        sleep(1000);
+        motorFrontLeft.setPowerFloat(TREAD_MOTOR_PWR);
+        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPowerFloat(-TREAD_MOTOR_PWR);
+        motorBackRight.setPowerFloat(TREAD_MOTOR_PWR);
+        motorScoopLeft.setPower();
+        motorScoopRight.setPower();
+
+        sleep(1000);
+        motorScoopLeft.setPowerFloat();
+        motorScoopRight.setPowerFloat();
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+        // use right holder
+        
+        sleep(1000);
+        //retract holders
+        motorFrontLeft.setPowerFloat(TREAD_MOTOR_PWR);
+        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPowerFloat(TREAD_MOTOR_PWR);
+        motorBackRight.setPowerFloat(-TREAD_MOTOR_PWR);
+        motorScoopLeft.setPower();
+        motorScoopRight.setPower();
+
+        sleep(1000);
+        motorFrontRight.setPowerFloat(TREAD_MOTOR_PWR);
+        motorBackRight.setPowerFloat(TREAD_MOTOR_PWR);
+        
+        sleep(1000)
+        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
+        motorBackRight.setPowerFloat(-TREAD_MOTOR_PWR);
+        
+        sleep(1000)
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+        
+        sleep(1000);
+        motorScoopLeft.setPowerFloat();
+        motorScoopRight.setPowerFloat();
+
+    }
+}

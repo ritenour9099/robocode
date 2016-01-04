@@ -36,48 +36,13 @@ public class NewInitialPersonRescue_Red extends LinearOpMode{
         motorBackLeft.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
-        motorFrontLeft.setPowerFloat(TREAD_MOTOR_PWR);
-        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
-        motorBackLeft.setPowerFloat(-TREAD_MOTOR_PWR);
-        motorBackRight.setPowerFloat(TREAD_MOTOR_PWR);
+        motorFrontLeft.setPower(1.0);
+        motorFrontRight.setPower(1.0);
+        motorBackLeft.setPower(1.0);
+        motorBackRight.setPower(1.0);
         motorScoopLeft.setPower();
         motorScoopRight.setPower();
 
-        sleep(1000);
-        motorScoopLeft.setPowerFloat();
-        motorScoopRight.setPowerFloat();
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
-        // use right holder
-        
-        sleep(1000);
-        //retract holders
-        motorFrontLeft.setPowerFloat(TREAD_MOTOR_PWR);
-        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
-        motorBackLeft.setPowerFloat(TREAD_MOTOR_PWR);
-        motorBackRight.setPowerFloat(-TREAD_MOTOR_PWR);
-        motorScoopLeft.setPower();
-        motorScoopRight.setPower();
-
-        sleep(1000);
-        motorFrontRight.setPowerFloat(TREAD_MOTOR_PWR);
-        motorBackRight.setPowerFloat(TREAD_MOTOR_PWR);
-        
-        sleep(1000)
-        motorFrontRight.setPowerFloat(-TREAD_MOTOR_PWR);
-        motorBackRight.setPowerFloat(-TREAD_MOTOR_PWR);
-        
-        sleep(1000)
-        motorFrontLeft.setPower(0.0);
-        motorFrontRight.setPower(0.0);
-        motorBackLeft.setPower(0.0);
-        motorBackRight.setPower(0.0);
-        
-        sleep(1000);
-        motorScoopLeft.setPowerFloat();
-        motorScoopRight.setPowerFloat();
 
     }
 }

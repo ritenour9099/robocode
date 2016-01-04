@@ -19,8 +19,6 @@ public class NewInitialPersonRescue_Red extends LinearOpMode{
         motorFrontRight = hardwareMap.dcMotor.get("right_front");
         motorBackLeft = hardwareMap.dcMotor.get("left_back");
         motorBackRight = hardwareMap.dcMotor.get("right_back");
-        motorScoopLeft = hardwareMap.dcMotor.get("motor_5");
-        motorScoopRight = hardwareMap.dcMotor.get("motor_6");
         motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
         motorBackRight.setDirection(DcMotor.Direction.REVERSE);
         
@@ -40,8 +38,7 @@ public class NewInitialPersonRescue_Red extends LinearOpMode{
         motorFrontRight.setPower(1.0);
         motorBackLeft.setPower(1.0);
         motorBackRight.setPower(1.0);
-        motorScoopLeft.setPower();
-        motorScoopRight.setPower();
+
 
 
     }

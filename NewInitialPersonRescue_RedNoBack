@@ -1,0 +1,46 @@
+//Time To Execute: 5 Seconds
+package com.qualcomm.ftcrobotcontroller.opmodes;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import java.lang.Override;
+
+public class NewInitialPersonRescue_Red extends LinearOpMode{
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    DcMotor motorScoopLeft;
+    DcMotor motorScoopRight;
+    final double TREAD_MOTOR_PWR = 1.0;
+    
+     @Override
+    public void runOpMode() throws InterruptedException {
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
+        motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
+        
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+        motorBackRight.setPower(TREAD_MOTOR_PWR);
+
+        sleep(1000);
+        motorFrontLeft.setPower(1.0);
+        motorFrontRight.setPower(1.0);
+        motorBackLeft.setPower(1.0);
+        motorBackRight.setPower(1.0);
+
+        sleep(1000);
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+        
+
+
+
+    }
+}

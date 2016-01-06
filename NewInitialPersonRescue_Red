@@ -22,22 +22,42 @@ public class NewInitialPersonRescue_Red extends LinearOpMode{
         motorFrontRight.setDirection(DcMotor.Direction.REVERSE);
         motorBackRight.setDirection(DcMotor.Direction.REVERSE);
         
-        // Are there still scoop motors? If not, we should rename them to the motors on the plow or the holders.
-        
         motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
         motorFrontRight.setPower(TREAD_MOTOR_PWR);
         motorBackLeft.setPower(-TREAD_MOTOR_PWR);
         motorBackRight.setPower(TREAD_MOTOR_PWR);
 
         sleep(1000);
-        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
-        motorBackLeft.setPower(TREAD_MOTOR_PWR);
-
-        sleep(1000);
         motorFrontLeft.setPower(1.0);
         motorFrontRight.setPower(1.0);
         motorBackLeft.setPower(1.0);
         motorBackRight.setPower(1.0);
+
+        sleep(1000);
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
+        
+        sleep(1000);
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+        motorFrontRight.setPower(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+        motorBackRight.setPower(-TREAD_MOTOR_PWR);
+        
+        sleep(1000)
+        motorFrontLeft.setPower(TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(TREAD_MOTOR_PWR);
+        
+        sleep(1000)
+        motorFrontLeft.setPower(-TREAD_MOTOR_PWR);
+        motorBackLeft.setPower(-TREAD_MOTOR_PWR);
+        
+        sleep(1000);
+        motorFrontLeft.setPower(0.0);
+        motorFrontRight.setPower(0.0);
+        motorBackLeft.setPower(0.0);
+        motorBackRight.setPower(0.0);
 
 
 

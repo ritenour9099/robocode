@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.Override;
 
-public class NewInitialPersonRescue_Red extends LinearOpMode{
+public class NewInitialPersonRescue_BlueNoBack extends LinearOpMode{
     DcMotor motorFrontLeft;
     DcMotor motorFrontRight;
     DcMotor motorBackLeft;

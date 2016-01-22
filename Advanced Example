@@ -1,0 +1,39 @@
+package com.qualcomm.ftcrobotcontroller.opmodes;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import java.lang.Override;
+
+
+public class AdvExample extends LinearOpMode {
+
+    DcMotor motorFrontLeft;
+    DcMotor motorFrontRight;
+    DcMotor motorBackLeft;
+    DcMotor motorBackRight;
+    FromFloorToCent_Blue startToCentral;
+    ParkingMoutainHighZone_Blue parkingMountain;
+    ReturnMoutainHighZone_Blue returnMoutain; 
+
+    double TREAD_MOTOR_PWR = 1.0;
+
+    @Override
+    public void runOpMode() throws InterruptedException {
+        //Here, we're initializing all the motor variables incase we need to use them oustide of the premade classes
+        motorFrontLeft = hardwareMap.dcMotor.get("left_front");
+        motorFrontRight = hardwareMap.dcMotor.get("right_front");
+        motorBackLeft = hardwareMap.dcMotor.get("left_back");
+        motorBackRight = hardwareMap.dcMotor.get("right_back");
+        //Then from there, we initialize the premade class variables to use after waitForStart();
+        startToCentral = new FromFloorToCent_Blue();
+        parkingMountain = new ParkingMoutainHighZone_Blue();
+        returnMoutain = new ReturnMoutainHighZone_Blue();
+
+        waitForStart();
+        sleep(1000);
+        startToCentral.runOpMode();
+        parkingMountain.runOpMode();
+        returnMoutain.runOpMode();
+
+
+    }
+}
